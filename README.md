@@ -1,17 +1,19 @@
 # freeslots
 Shell application written in Go language to retrieve events from Google Calendar, display them and compute free slots in your agenda.
 
-# freeslots
+## How to use the application
 
-# How to use the application
+### Install dependencies
 
-## Install dependencies
-* go get golang.org/x/oauth2
-* go get golang.org/x/oauth2/google
-* go get google.golang.org/api/calendar/v3
-* go get github.com/alexflint/go-arg
+Install the Go language, then run the following commands:
+```bash
+go get golang.org/x/oauth2
+go get golang.org/x/oauth2/google
+go get google.golang.org/api/calendar/v3
+go get github.com/alexflint/go-arg
+```
 
-## Get Google Calendar API credentials
+### Get Google Calendar API credentials
 * Go to the Google Cloud Console
 * Create a new project (or select an existing one)
 * Enable the Google Calendar API
@@ -20,7 +22,7 @@ Shell application written in Go language to retrieve events from Google Calendar
 * Download the credentials JSON file
 * Save it as credentials.json in the same directory as your Go program
 
-## Run the program as follows
+### Run the program as follows
 ```bash
 Usage: mytestapps --useremail USEREMAIL [--showallevents] [--creds CREDS] [--token TOKEN] [--listen LISTEN] [--nodays NODAYS] [--minduration MINDURATION] [--from FROM] [--to TO] [--format FORMAT] [--skipweekends] [--startdate STARTDATE] [--showslotduration]
 
@@ -44,7 +46,8 @@ Options:
   --help, -h             display this help and exit
 
 
-Examples:
+Some examples:
+
 go run . 
 
 go run . --useremail sample@gmail.com --nodays 14 --from 09:00 --to 18:00
@@ -57,7 +60,7 @@ go run . --useremail sample@gmail.com --startdate 2025-12-03
 
 ```
 
-## First-time authentication
+### First-time authentication
 
 * The program will display a URL
 * Open it in your browser
